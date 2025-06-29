@@ -5,7 +5,7 @@
 This project implements a real-time **hand gesture recognition system** using a **Decision Tree classifier** trained in Python and deployed on an **ESP32-CAM**. It uses **HOG (Histogram of Oriented Gradients)** for feature extraction and classifies gestures into 3 labels corresponding to **hand signs for characters A, B, and C**.
 
 ---
-![Sign Language A-B-C](https://sdmntpreastus.oaiusercontent.com/files/00000000-2184-61f9-9327-3fc7207d44c4/raw?se=2025-06-29T18%3A10%3A58Z&sp=r&sv=2024-08-04&sr=b&scid=65318542-f80b-5425-b5ac-a4ff92163495&skoid=f71d6506-3cac-498e-b62a-67f9228033a9&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-28T19%3A10%3A37Z&ske=2025-06-29T19%3A10%3A37Z&sks=b&skv=2024-08-04&sig=c27DodS6mKWv9qDUfc1uAc08x61ddwXZzfFldiv7x1U%3D)
+
 <p align="center">
   <img src="https://sdmntpreastus.oaiusercontent.com/files/00000000-2184-61f9-9327-3fc7207d44c4/raw?se=2025-06-29T18%3A10%3A58Z&sp=r&sv=2024-08-04&sr=b&scid=65318542-f80b-5425-b5ac-a4ff92163495&skoid=f71d6506-3cac-498e-b62a-67f9228033a9&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-28T19%3A10%3A37Z&ske=2025-06-29T19%3A10%3A37Z&sks=b&skv=2024-08-04&sig=c27DodS6mKWv9qDUfc1uAc08x61ddwXZzfFldiv7x1U%3D" width="350"/>
 </p>
