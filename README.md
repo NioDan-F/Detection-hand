@@ -53,9 +53,9 @@ This project implements a real-time **hand gesture recognition system** using a 
 
 | Label    | Description       |
 |----------|-------------------|
-| 00500A   | Open hand          |
-| 00500B   | Two fingers (V)    |
-| 00500C   | Fist or closed     |
+| 00500A   | (ký tự A)         |
+| 00500B   | (Ký tự B)         |
+| 00500C   | (Ký tự C)         |
 
 ## 🛠️ Getting Started
 
