@@ -1,13 +1,31 @@
 
 # 🖐️ Hand Gesture Recognition using Decision Tree on ESP32-CAM
 
-This project implements a real-time **hand gesture recognition system** using a **Decision Tree classifier** trained in Python and deployed on an **ESP32-CAM**. It uses **HOG (Histogram of Oriented Gradients)** for feature extraction and classifies gestures into 3 labels (`00500A`, `00500B`, `00500C`).
+This project implements a real-time **hand gesture recognition system** using a **Decision Tree classifier** trained in Python and deployed on an **ESP32-CAM**. It uses **HOG (Histogram of Oriented Gradients)** for feature extraction and classifies gestures into 3 labels corresponding to **hand signs for characters A, B, and C**.
+
+---
+
+## 🧪 Project Goal: Recognize 3 Hand Signs (A, B, C)
+
+The system is designed to detect and classify static hand gestures that represent the letters:
+
+| Label    | Hand Sign | Description |
+|----------|-----------|-------------|
+| 00500A   | ✋         | Letter A    |
+| 00500B   | ✌️         | Letter B    |
+| 00500C   | 👊         | Letter C    |
+
+These labels are customizable depending on the collected dataset.
+
+---
 
 ## 🔍 Overview
 
 - 🧠 Trained a Decision Tree model using scikit-learn on extracted HOG features from hand gesture images.
 - 📦 Model is exported as C++ code using `everywhereml` format, embedded into ESP32-CAM firmware.
 - 🎥 ESP32-CAM captures hand image, extracts HOG features, and predicts gesture in real time.
+
+---
 
 ## 🧠 Machine Learning Details
 
@@ -16,15 +34,43 @@ This project implements a real-time **hand gesture recognition system** using a 
 - **Model output**: 3 classes with labels: `00500A`, `00500B`, `00500C`
 - Model logic located in: `HogClassifier.h`
 
+---
+
+## 📎 Requirements
+
+- To capture and process hand gesture images using ESP32-CAM, install the `ESP32` board via Arduino IDE and include **EloquentTinyML** and **esp_camera** libraries.
+- To train the model and convert to C++, install the [`EverywhereML`](https://github.com/eloquentarduino/everywhereml-python) Python package.
+- To run this project, any **ESP32-CAM** variant can be used, preferably one with external PSRAM:
+  - [AI Thinker](https://docs.ai-thinker.com/en/esp32-cam)
+  - [M5Stack ESP32-CAM](https://shop.m5stack.com/products/esp32-cam-board)
+  - [Espressif official](https://www.espressif.com/en/products/devkits/esp32-devkitc/overview)
+
+---
+
+## 💻 Code
+
+- [`ESP32CAM_Detection.ino`](ESP32CAM_Detection/[ino]-ESP32CAM_Detection.ino) – Main ESP32 sketch for capturing, processing, and predicting hand gestures.
+- [`HogClassifier.h`](ESP32CAM_Detection/[h]-HogClassifier.h) – Contains the Decision Tree classifier generated from the Python notebook using EverywhereML.
+- [`HogPipeline.h`](ESP32CAM_Detection/[h]-HogPipeline.h) – Contains the HOG feature extractor logic used on the ESP32.
+- [`Detection_Hand_Train.ipynb`]([ipynb]-Detection_Hand_Train.ipynb) – Python notebook used to train the Decision Tree model and export it for C++ deployment.
+
+---
+
 ## 📦 Project Structure
 
 ```
-├── decision.ipynb              # Python notebook for training Decision Tree & exporting model
-├── ESP32CAM_Detection.ino      # Main Arduino sketch for ESP32-CAM (reads image, predicts)
-├── HogPipeline.h               # HOG feature extraction pipeline
-├── HogClassifier.h             # Decision Tree model in C++
-├── README.md                   # Project documentation
+├── ESP32CAM_Colect Data/           # Dataset capture sketch (optional)
+│   └── Collect Data.ino
+├── ESP32CAM_Detection/             # ESP32 code for hand sign detection
+│   ├── ESP32CAM_Detection.ino
+│   ├── HogClassifier.h
+│   └── HogPipeline.h
+├── dataset_folder/                 # (Optional) Raw image dataset for training
+├── Detection_Hand_Train.ipynb      # Jupyter Notebook for training
+└── README.md                       # Project documentation
 ```
+
+---
 
 ## 🚀 How It Works
 
@@ -35,6 +81,8 @@ This project implements a real-time **hand gesture recognition system** using a 
     - Captures frame from camera.
     - Converts to grayscale, applies HOG, then predicts with the embedded model.
     - Returns class label via Serial output.
+
+---
 
 ## 💻 Dependencies
 
@@ -49,20 +97,7 @@ This project implements a real-time **hand gesture recognition system** using a 
 - Arduino core for ESP32
 - `esp32cam` or `esp_camera` library
 
-## 📷 Labels / Gestures
-
-| Label    | Description       |
-|----------|-------------------|
-| 00500A   | (ký tự A)         |
-| 00500B   | (Ký tự B)         |
-| 00500C   | (Ký tự C)         |
-
-## 🛠️ Getting Started
-
-1. Train model with `decision.ipynb`.
-2. Upload code to ESP32-CAM via Arduino IDE (`ESP32CAM_Detection.ino`).
-3. Connect Serial Monitor to see predicted gesture output.
-4. Test with hand gestures in front of the ESP32-CAM.
+---
 
 ## 👤 Author
 
