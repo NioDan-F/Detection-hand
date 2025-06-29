@@ -1,5 +1,6 @@
-
 # 🖐️ Hand Gesture Recognition using Decision Tree on ESP32-CAM
+
+![Sign Language A-B-C](https://archiv.taubenschlag.de/cms_pics/FINGERALPHABET_mini.jpg)
 
 This project implements a real-time **hand gesture recognition system** using a **Decision Tree classifier** trained in Python and deployed on an **ESP32-CAM**. It uses **HOG (Histogram of Oriented Gradients)** for feature extraction and classifies gestures into 3 labels corresponding to **hand signs for characters A, B, and C**.
 
