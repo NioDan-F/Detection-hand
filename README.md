@@ -1,6 +1,6 @@
 # 🖐️ Hand Gesture Recognition using Decision Tree on ESP32-CAM
 <p align="center">
-  <img src="https://sdmntpreastus.oaiusercontent.com/files/00000000-0398-61f9-b45c-d387bab9f84f/raw?se=2025-08-21T15%3A19%3A06Z&sp=r&sv=2024-08-04&sr=b&scid=2e48d2dd-1df0-5fdc-9b9f-cddac9cb1a6c&skoid=02b7f7b5-29f8-416a-aeb6-99464748559d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-20T21%3A31%3A58Z&ske=2025-08-21T21%3A31%3A58Z&sks=b&skv=2024-08-04&sig=Y7MtaOInKh3u5sD5ZZe1JleP1lxYTsfHaRi9dTvbu2o%3D" width="350"/>
+  <img src="https://i.postimg.cc/WzLV33Pr/image.png" width="350"/>
 </p>
 
 ---
